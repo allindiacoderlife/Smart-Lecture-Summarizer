@@ -6,6 +6,10 @@ import { config } from "./config/app.config.js";
 import { errorHandler } from "./middleware/errorHandler.js";
 import { asyncHandler } from "./utils/asyncHandler.js";
 import apiRoutes from "./routes/index.js";
+import connectDB from "./config/db.js";
+
+// 🔌 Connect database
+connectDB();
 
 const app = express();
 
